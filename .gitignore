@@ -1,4 +1,12 @@
-credentials.json
+# Python
 __pycache__/
 *.pyc
+
+# Environment
 .env
+
+# Google credentials (IMPORTANT)
+credentials.json
+
+# VS Code
+.vscode/

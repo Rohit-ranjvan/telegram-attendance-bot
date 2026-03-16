@@ -1,5 +1,6 @@
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+import os
 
 scope = [
     "https://spreadsheets.google.com/feeds",
@@ -7,7 +8,7 @@ scope = [
 ]
 
 creds = ServiceAccountCredentials.from_json_keyfile_name(
-    "credentials.json", scope
+    os.getenv("GOOGLE_CREDENTIALS_FILE"), scope
 )
 
 client = gspread.authorize(creds)
